@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { ToastProvider } from './src/components/ui';
+import { OverlayProvider, ToastProvider } from './src/components/ui';
 import { AuthProvider } from './src/data/auth';
 import { RootNavigator } from './src/navigation';
 
@@ -17,8 +17,10 @@ export default function App() {
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <ToastProvider>
-            <StatusBar style="dark" />
-            <RootNavigator />
+            <OverlayProvider>
+              <StatusBar style="dark" />
+              <RootNavigator />
+            </OverlayProvider>
           </ToastProvider>
         </AuthProvider>
       </QueryClientProvider>
