@@ -1,3 +1,5 @@
+sonatamobile.vercel.app
+
 # SONATA Mobile (protótipo)
 
 App React Native (Expo) do perfil Administrador. As 7 telas: Login, Dashboard, Horários, Alunos, Matrícula de aluno, Professores e Cadastro de professor.
